@@ -14,7 +14,8 @@ import io.ReadFile;
 public class LecturaEscrituraXmLxmlApplication {
 
 	public static void main(String argv[]) throws ParserConfigurationException, SAXException, IOException {
-		String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
+		String path = "D:\\Repos David\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
+		//String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
 		ReadFile rf = new ReadFile();
 		
 		rf.readDocument(rf.parseXMLFile(path));
