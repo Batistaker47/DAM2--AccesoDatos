@@ -37,28 +37,35 @@ public class ReadFile {
 		
 	}
 	
+	/**
+	 * 
+	 * **/
 	public void readDocument (Document doc) {
 		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 		NodeList nodeList = doc.getElementsByTagName("staff");
-	    for (int temp = 0; temp < nodeList.getLength(); temp++) {
-	        Node nNode = nodeList.item(temp);
+	    for (int i = 0; i < nodeList.getLength(); i++) {
+	        Node nNode = nodeList.item(i);
 	        System.out.println("\nCurrent Element :" + nNode.getNodeName());
 	        if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-	            Element eElement = (Element) nNode;
-	            System.out.println("Staff id : "
-	                               + eElement.getAttribute("id"));
-	            System.out.println("First Name : "
-	                               + eElement.getElementsByTagName("firstname")
+	            Element element = (Element) nNode;
+	            
+	            Element salaryElement = (Element) element.getElementsByTagName("salary").item(0);
+	            String currency = salaryElement.getAttribute("currency");
+
+	            System.out.println("Id: "
+	                               + element.getAttribute("id"));
+	            System.out.println("First Name: "
+	                               + element.getElementsByTagName("firstname")
 	                                 .item(0).getTextContent());
-	            System.out.println("Last Name : "
-	                               + eElement.getElementsByTagName("lastname")
+	            System.out.println("Last Name: "
+	                               + element.getElementsByTagName("lastname")
 	                                 .item(0).getTextContent());
-	            System.out.println("Nick Name : "
-	                               + eElement.getElementsByTagName("nickname")
+	            System.out.println("Nick Name: "
+	                               + element.getElementsByTagName("nickname")
 	                                 .item(0).getTextContent());
 	            System.out.println("Salary : "
-	                               + eElement.getElementsByTagName("salary")
-	                                 .item(0).getTextContent());
+	                               + element.getElementsByTagName("salary")
+	                                 .item(0).getTextContent() + " " +  currency );
 	        }
 	    }
 	}
