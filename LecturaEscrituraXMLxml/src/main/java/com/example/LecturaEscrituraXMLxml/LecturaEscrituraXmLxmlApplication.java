@@ -15,7 +15,10 @@ import io.WriteFile;
 public class LecturaEscrituraXmLxmlApplication {
 
 	public static void main(String argv[]) throws ParserConfigurationException, SAXException, IOException {
+		// Ruta clase
 		//String path = "D:\\Repos David\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
+		
+		// Ruta casa
 		String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
 		ReadFile rf = new ReadFile();
 		WriteFile wf = new WriteFile();

@@ -11,6 +11,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ReadFile {
 	
@@ -40,8 +41,8 @@ public class ReadFile {
 	/**
 	 * 
 	 * **/
-	public String readDocument (Document doc) {
-		String resultText = "";
+	public ArrayList<String> readDocument (Document doc) {
+		ArrayList<String> resultText = new ArrayList<>();
 		NodeList nodeList = doc.getElementsByTagName("staff");
 	    for (int i = 0; i < nodeList.getLength(); i++) {
 	        Node nNode = nodeList.item(i);
@@ -51,13 +52,15 @@ public class ReadFile {
 	            Element salaryElement = (Element) element.getElementsByTagName("salary").item(0);
 	            String currency = salaryElement.getAttribute("currency");
 	            
-	            resultText = "Root element :" + doc.getDocumentElement().getNodeName() + 
-	            			"\nCurrent Element:" + nNode.getNodeName() + 
-	            			"\nId: " + element.getAttribute("id") + 
-	            			"\nFirst Name: " + element.getElementsByTagName("firstname").item(0).getTextContent() + 
-	            			"\nLast Name: "+ element.getElementsByTagName("lastname").item(0).getTextContent() +
-	            			"\nNick Name: " + element.getElementsByTagName("nickname").item(0).getTextContent() +
-	            			"\nSalary : " + element.getElementsByTagName("salary").item(0).getTextContent() + " " +  currency;
+	            resultText.add(
+	            	"Root element :" + doc.getDocumentElement().getNodeName() + 
+        			"\nCurrent Element:" + nNode.getNodeName() + 
+        			"\nId: " + element.getAttribute("id") + 
+        			"\nFirst Name: " + element.getElementsByTagName("firstname").item(0).getTextContent() + 
+        			"\nLast Name: "+ element.getElementsByTagName("lastname").item(0).getTextContent() +
+        			"\nNick Name: " + element.getElementsByTagName("nickname").item(0).getTextContent() +
+        			"\nSalary : " + element.getElementsByTagName("salary").item(0).getTextContent() + " " +  currency
+	            				);
 	        }
 	    }
 		return resultText;

@@ -1,7 +1,13 @@
-Root element :company
+[Root element :company
+Current Element:staff
+Id: 1001
+First Name: yong
+Last Name: mook kim
+Nick Name: mkyong
+Salary : 100000 USD, Root element :company
 Current Element:staff
 Id: 2001
 First Name: low
 Last Name: yin fong
 Nick Name: fong fong
-Salary : 200000 INR
+Salary : 200000 INR]
