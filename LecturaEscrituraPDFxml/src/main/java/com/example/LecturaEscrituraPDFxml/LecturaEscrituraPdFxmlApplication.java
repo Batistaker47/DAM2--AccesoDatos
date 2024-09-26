@@ -11,18 +11,14 @@ import io.WriteFile;
 @SpringBootApplication
 public class LecturaEscrituraPdFxmlApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		SpringApplication.run(LecturaEscrituraPdFxmlApplication.class, args);
 		
 		String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraPDFxml\\src\\main\\resources\\WhatisLoremIpsum.pdf";
 		PDFConverter c = new PDFConverter();
 		WriteFile wf = new WriteFile();
-		try {
 			wf.writeText(c.convertDocument(path));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 }
