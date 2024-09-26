@@ -40,34 +40,27 @@ public class ReadFile {
 	/**
 	 * 
 	 * **/
-	public void readDocument (Document doc) {
-		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+	public String readDocument (Document doc) {
+		String resultText = "";
 		NodeList nodeList = doc.getElementsByTagName("staff");
 	    for (int i = 0; i < nodeList.getLength(); i++) {
 	        Node nNode = nodeList.item(i);
-	        System.out.println("\nCurrent Element :" + nNode.getNodeName());
 	        if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 	            Element element = (Element) nNode;
 	            
 	            Element salaryElement = (Element) element.getElementsByTagName("salary").item(0);
 	            String currency = salaryElement.getAttribute("currency");
-
-	            System.out.println("Id: "
-	                               + element.getAttribute("id"));
-	            System.out.println("First Name: "
-	                               + element.getElementsByTagName("firstname")
-	                                 .item(0).getTextContent());
-	            System.out.println("Last Name: "
-	                               + element.getElementsByTagName("lastname")
-	                                 .item(0).getTextContent());
-	            System.out.println("Nick Name: "
-	                               + element.getElementsByTagName("nickname")
-	                                 .item(0).getTextContent());
-	            System.out.println("Salary : "
-	                               + element.getElementsByTagName("salary")
-	                                 .item(0).getTextContent() + " " +  currency );
+	            
+	            resultText = "Root element :" + doc.getDocumentElement().getNodeName() + 
+	            			"\nCurrent Element:" + nNode.getNodeName() + 
+	            			"\nId: " + element.getAttribute("id") + 
+	            			"\nFirst Name: " + element.getElementsByTagName("firstname").item(0).getTextContent() + 
+	            			"\nLast Name: "+ element.getElementsByTagName("lastname").item(0).getTextContent() +
+	            			"\nNick Name: " + element.getElementsByTagName("nickname").item(0).getTextContent() +
+	            			"\nSalary : " + element.getElementsByTagName("salary").item(0).getTextContent() + " " +  currency;
 	        }
 	    }
+		return resultText;
 	}
 	
 	

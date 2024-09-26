@@ -7,6 +7,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 import io.ReadFile;
+import io.WriteFile;
 //import org.springframework.boot.SpringApplication;
 //import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,11 +15,11 @@ import io.ReadFile;
 public class LecturaEscrituraXmLxmlApplication {
 
 	public static void main(String argv[]) throws ParserConfigurationException, SAXException, IOException {
-		String path = "D:\\Repos David\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
-		//String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
+		//String path = "D:\\Repos David\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
+		String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
 		ReadFile rf = new ReadFile();
-		
-		rf.readDocument(rf.parseXMLFile(path));
+		WriteFile wf = new WriteFile();
+		wf.writeText(rf.readDocument(rf.parseXMLFile(path)));
 	}
 
 }
