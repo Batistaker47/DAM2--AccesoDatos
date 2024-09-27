@@ -58,8 +58,8 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee First Name:" + firstName + "\nLastName: " + lastName + "Nickname: " + nickname + "\nSalary: "
-				+ salary + currency;
+		return "Employee First Name:" + firstName + "\nLastName: " + lastName + "\nNickname: " + nickname + "\nSalary: "
+				+ salary + "\nCurrency: " + currency;
 	}
 	
 	
