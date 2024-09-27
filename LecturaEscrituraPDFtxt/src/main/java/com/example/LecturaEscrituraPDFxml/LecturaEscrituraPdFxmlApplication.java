@@ -5,8 +5,8 @@ import java.io.IOException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import io.PDFConverter;
-import io.WriteFile;
+import com.example.LecturaEscrituraPDFxml.io.PDFConverter;
+import com.example.LecturaEscrituraPDFxml.io.WriteFile;
 
 @SpringBootApplication
 public class LecturaEscrituraPdFxmlApplication {
@@ -16,9 +16,9 @@ public class LecturaEscrituraPdFxmlApplication {
 		SpringApplication.run(LecturaEscrituraPdFxmlApplication.class, args);
 		
 		String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraPDFxml\\src\\main\\resources\\WhatisLoremIpsum.pdf";
-		PDFConverter c = new PDFConverter();
-		WriteFile wf = new WriteFile();
-			wf.writeText(c.convertDocument(path));
+		PDFConverter pdfConverter = new PDFConverter();
+		WriteFile writeFile = new WriteFile();
+		writeFile.writeText(pdfConverter.convertDocument(path));
 	}
 
 }
