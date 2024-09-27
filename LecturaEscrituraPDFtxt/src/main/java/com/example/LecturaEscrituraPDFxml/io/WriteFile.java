@@ -6,9 +6,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class WriteFile {
-	public void writeText(String resultText) {
-		File file = new File(
-				"C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraPDFxml\\src\\main\\resources\\GeneratedDoc.xml");
+	public void writeText(String resultText, String path) {
+		File file = new File(path);
 
 		try {
 			FileWriter writter = new FileWriter(file, false);

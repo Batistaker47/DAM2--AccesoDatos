@@ -15,10 +15,11 @@ public class LecturaEscrituraPdFxmlApplication {
 		
 		SpringApplication.run(LecturaEscrituraPdFxmlApplication.class, args);
 		
-		String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraPDFxml\\src\\main\\resources\\WhatisLoremIpsum.pdf";
+		String pathLectura = "src\\main\\resources\\WhatisLoremIpsum.pdf";
+		String pathEscritura = "src\\main\\resources\\GeneratedDoc.txt";
 		PDFConverter pdfConverter = new PDFConverter();
 		WriteFile writeFile = new WriteFile();
-		writeFile.writeText(pdfConverter.convertDocument(path));
+		writeFile.writeText(pdfConverter.convertDocument(pathLectura),pathEscritura);
 	}
 
 }
