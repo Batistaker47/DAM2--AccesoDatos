@@ -1,12 +1,11 @@
-package com.example.LecturaEscrituraPDFxml;
+package com.example.LecturaEscrituraPDFtxt;
 
 import java.io.IOException;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.LecturaEscrituraPDFxml.io.PDFConverter;
-import com.example.LecturaEscrituraPDFxml.io.WriteFile;
+import com.example.LecturaEscrituraPDFtxt.io.PDFConverter;
 
 @SpringBootApplication
 public class LecturaEscrituraPdFxmlApplication {
@@ -18,8 +17,8 @@ public class LecturaEscrituraPdFxmlApplication {
 		String pathLectura = "src\\main\\resources\\WhatisLoremIpsum.pdf";
 		String pathEscritura = "src\\main\\resources\\GeneratedDoc.txt";
 		PDFConverter pdfConverter = new PDFConverter();
-		WriteFile writeFile = new WriteFile();
-		writeFile.writeText(pdfConverter.convertDocument(pathLectura),pathEscritura);
+		
+		pdfConverter.parseAndWrittePDF(pathLectura, pathEscritura);
 	}
 
 }

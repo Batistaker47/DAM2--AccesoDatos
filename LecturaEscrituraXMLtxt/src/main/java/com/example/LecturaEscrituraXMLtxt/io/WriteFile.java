@@ -1,4 +1,4 @@
-package io;
+package com.example.LecturaEscrituraXMLtxt.io;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import models.Employee;
+import com.example.LecturaEscrituraXMLtxt.models.Employee;
 
 public class WriteFile {
 

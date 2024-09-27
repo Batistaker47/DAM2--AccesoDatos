@@ -1,4 +1,4 @@
-package com.example.LecturaEscrituraXMLxml;
+package com.example.LecturaEscrituraXMLtxt;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,11 +8,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import io.ReadFile;
-import io.WriteFile;
-//import org.springframework.boot.SpringApplication;
-//import org.springframework.boot.autoconfigure.SpringBootApplication;
-import models.Employee;
+import com.example.LecturaEscrituraXMLtxt.io.ReadFile;
+import com.example.LecturaEscrituraXMLtxt.io.WriteFile;
+import com.example.LecturaEscrituraXMLtxt.models.Employee;
 
 //@SpringBootApplication
 public class LecturaEscrituraXmLxmlApplication {

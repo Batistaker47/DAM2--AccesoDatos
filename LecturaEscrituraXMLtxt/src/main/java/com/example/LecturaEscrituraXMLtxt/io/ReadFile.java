@@ -1,4 +1,4 @@
-package io;
+package com.example.LecturaEscrituraXMLtxt.io;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -7,7 +7,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import models.Employee;
+import com.example.LecturaEscrituraXMLtxt.models.Employee;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
@@ -50,12 +50,13 @@ public class ReadFile {
 	            
 	            Element salaryElement = (Element) element.getElementsByTagName("salary").item(0);
 	            String currency = salaryElement.getAttribute("currency");
+	            String employeeCurrency = currency;
 	            
 	            String employeeFirstName =  element.getElementsByTagName("firstname").item(0).getTextContent();
 	            String employeeLastName = element.getElementsByTagName("lastname").item(0).getTextContent();
 	            String employeeNickName = element.getElementsByTagName("nickname").item(0).getTextContent();
 	            String employeeSalary = element.getElementsByTagName("salary").item(0).getTextContent();
-	            String employeeCurrency = currency;
+	            
 	            
 	            Employee staffEmployee = new Employee (employeeFirstName,employeeLastName,employeeNickName,employeeSalary,employeeCurrency);
 	            resultText.add(staffEmployee);
