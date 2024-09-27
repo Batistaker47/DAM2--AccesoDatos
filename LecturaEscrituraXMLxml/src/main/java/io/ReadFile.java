@@ -6,6 +6,9 @@ import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+
+import models.Employee;
+
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
@@ -37,11 +40,8 @@ public class ReadFile {
 		
 	}
 	
-	/**
-	 * 
-	 * **/
-	public ArrayList<String> readDocument (Document doc) {
-		ArrayList<String> resultText = new ArrayList<>();
+	public ArrayList<Employee> readDocument (Document doc) {
+		ArrayList<Employee> resultText = new ArrayList<>();
 		NodeList nodeList = doc.getElementsByTagName("staff");
 	    for (int i = 0; i < nodeList.getLength(); i++) {
 	        Node nNode = nodeList.item(i);
@@ -51,15 +51,14 @@ public class ReadFile {
 	            Element salaryElement = (Element) element.getElementsByTagName("salary").item(0);
 	            String currency = salaryElement.getAttribute("currency");
 	            
-	            resultText.add(
-	            	"Root element :" + doc.getDocumentElement().getNodeName() + 
-        			"\nCurrent Element:" + nNode.getNodeName() + 
-        			"\nId: " + element.getAttribute("id") + 
-        			"\nFirst Name: " + element.getElementsByTagName("firstname").item(0).getTextContent() + 
-        			"\nLast Name: "+ element.getElementsByTagName("lastname").item(0).getTextContent() +
-        			"\nNick Name: " + element.getElementsByTagName("nickname").item(0).getTextContent() +
-        			"\nSalary : " + element.getElementsByTagName("salary").item(0).getTextContent() + " " +  currency
-	            				);
+	            String employeeFirstName =  element.getElementsByTagName("firstname").item(0).getTextContent();
+	            String employeeLastName = element.getElementsByTagName("lastname").item(0).getTextContent();
+	            String employeeNickName = element.getElementsByTagName("nickname").item(0).getTextContent();
+	            String employeeSalary = element.getElementsByTagName("salary").item(0).getTextContent();
+	            String employeeCurrency = currency;
+	            
+	            Employee staffEmployee = new Employee (employeeFirstName,employeeLastName,employeeNickName,employeeSalary,employeeCurrency);
+	            resultText.add(staffEmployee);
 	        }
 	    }
 		return resultText;

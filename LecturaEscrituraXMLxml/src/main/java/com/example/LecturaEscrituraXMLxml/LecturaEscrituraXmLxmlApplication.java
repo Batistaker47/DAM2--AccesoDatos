@@ -15,14 +15,14 @@ import io.WriteFile;
 public class LecturaEscrituraXmLxmlApplication {
 
 	public static void main(String argv[]) throws ParserConfigurationException, SAXException, IOException {
-		// Ruta clase
-		//String path = "D:\\Repos David\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
 		
-		// Ruta casa
-		String path = "C:\\Users\\Usuario\\Desktop\\GitHub Repos\\DAM2--AccesoDatos\\LecturaEscrituraXMLxml\\src\\main\\resources\\Ex2document.xml";
-		ReadFile rf = new ReadFile();
-		WriteFile wf = new WriteFile();
-		wf.writeText(rf.readDocument(rf.parseXMLFile(path)));
+		// OJO! Pasar SIEMPRE LAS RUTAS RELATIVAS Y METERLAS EN EL MAIN PARA QUE EL RESTO NO TOQUEN LAS CLASES
+		String pathEscritura = "src\\main\\resources\\GeneratedDoc.txt";
+		String pathLectura = "src\\main\\resources\\Ex2document.xml";
+		ReadFile readFile = new ReadFile();
+		WriteFile writeFile = new WriteFile();
+		
+		writeFile.writeText(readFile.readDocument(readFile.parseXMLFile(pathLectura)),pathEscritura);
 	}
 
 }

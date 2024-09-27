@@ -1,14 +1,14 @@
-package utils;
+package models;
 
-public class Staff {
+public class Employee {
 	
 	protected String firstName;
 	protected String lastName;
 	protected String nickname;
-	protected int salary;
+	protected String salary;
 	protected String currency;
 	
-	public Staff(String firstName, String lastName, String nickname, int salary, String currency) {
+	public Employee(String firstName, String lastName, String nickname, String salary, String currency) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.nickname = nickname;
@@ -40,11 +40,11 @@ public class Staff {
 		this.nickname = nickname;
 	}
 
-	public int getSalary() {
+	public String getSalary() {
 		return salary;
 	}
 
-	public void setSalary(int salary) {
+	public void setSalary(String salary) {
 		this.salary = salary;
 	}
 
@@ -58,7 +58,7 @@ public class Staff {
 
 	@Override
 	public String toString() {
-		return "Staff\nFirst Name:" + firstName + "\nLastName: " + lastName + "Nickname: " + nickname + "\nSalary: "
+		return "Employee First Name:" + firstName + "\nLastName: " + lastName + "Nickname: " + nickname + "\nSalary: "
 				+ salary + currency;
 	}
 	

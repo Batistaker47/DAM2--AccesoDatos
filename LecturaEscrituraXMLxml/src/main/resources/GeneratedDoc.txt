@@ -1,0 +1,22 @@
+First name: yong
+
+Last name: mook kim
+
+Nick name: mkyong
+
+Salary: 100000
+
+Currency: USD
+
+
+First name: low
+
+Last name: yin fong
+
+Nick name: fong fong
+
+Salary: 200000
+
+Currency: INR
+
+
