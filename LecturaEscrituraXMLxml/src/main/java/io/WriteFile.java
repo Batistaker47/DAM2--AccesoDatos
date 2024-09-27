@@ -18,11 +18,11 @@ public class WriteFile {
 			PrintWriter pw = new PrintWriter(escritor);
 			
 			for (Employee staff : resultText) {
-				pw.println("First name: " + staff.getFirstName().toString() + "\n");
-				pw.println("Last name: " + staff.getLastName().toString()+ "\n");
-				pw.println("Nick name: " + staff.getNickname().toString()+ "\n");
-				pw.println("Salary: " + staff.getSalary().toString()+ "\n");
-				pw.println("Currency: " + staff.getCurrency().toString()+ "\n");
+				pw.println("First name: " + staff.getFirstName().toString());
+				pw.println("Last name: " + staff.getLastName().toString());
+				pw.println("Nick name: " + staff.getNickname().toString());
+				pw.println("Salary: " + staff.getSalary().toString());
+				pw.println("Currency: " + staff.getCurrency().toString());
 				pw.print("\n");
 			}
 			
