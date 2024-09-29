@@ -35,7 +35,7 @@ public class PDFConverter {
 			PrintWriter printWritter = new PrintWriter(writter);
 			
 			String formatedText = text.replaceAll("[aA]", "@");
-
+			
 			printWritter.println(formatedText);
 			printWritter.close();
 
@@ -43,12 +43,11 @@ public class PDFConverter {
 			System.out.println("ERROR al intentar escibir en el archivo");
 		}
 	}
-	
-	public String changeVowels(String text, String charToChange, String newChar) {
+	/*public String changeVowels(String text, String charToChange, String newChar) {
 		String formatedText = "";
 		
 		formatedText = text.replaceAll(charToChange, newChar);
 		
 		return formatedText;
-	}
+	}*/
 }
