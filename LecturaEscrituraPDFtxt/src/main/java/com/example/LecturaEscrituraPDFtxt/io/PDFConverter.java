@@ -4,13 +4,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-
-import com.example.LecturaEscrituraPDFtxt.models.Lines;
 
 public class PDFConverter {
 
@@ -32,28 +29,26 @@ public class PDFConverter {
 		pddDocument.close();
 	    
 		File exitFile = new File(exitPath);
-
+		
 		try {
 			FileWriter writter = new FileWriter(exitFile, false);
 			PrintWriter printWritter = new PrintWriter(writter);
 			
-			String[] wordsText = text.split("");
-			
-			for (int i = 0; i < wordsText.length; i++) {
-				Lines line = new Lines();
-				String coincidence1 = "a";
-				String coincidence2 = "A";
-				line.setLine(wordsText[i]);
-				if (line.getLine().equals(coincidence1) || line.getLine().equals(coincidence2)) {
-					line.setLine("@");
-				}
-				System.out.println(line);
-			}
-			printWritter.println(text);
+			String formatedText = text.replaceAll("[aA]", "@");
+
+			printWritter.println(formatedText);
 			printWritter.close();
 
 		} catch (IOException e) {
 			System.out.println("ERROR al intentar escibir en el archivo");
 		}
+	}
+	
+	public String changeVowels(String text, String charToChange, String newChar) {
+		String formatedText = "";
+		
+		formatedText = text.replaceAll(charToChange, newChar);
+		
+		return formatedText;
 	}
 }

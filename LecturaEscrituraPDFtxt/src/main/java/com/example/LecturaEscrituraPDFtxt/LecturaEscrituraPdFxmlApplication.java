@@ -16,6 +16,7 @@ public class LecturaEscrituraPdFxmlApplication {
 		
 		String pathLectura = "src\\main\\resources\\WhatisLoremIpsum.pdf";
 		String pathEscritura = "src\\main\\resources\\GeneratedDoc.txt";
+		
 		PDFConverter pdfConverter = new PDFConverter();
 		
 		pdfConverter.parseAndWrittePDF(pathLectura, pathEscritura);

@@ -16,8 +16,5 @@ public class Lines {
 	public String toString() {
 		return "Line " + line;
 	}
-	
-	
-	
-	
+
 }
