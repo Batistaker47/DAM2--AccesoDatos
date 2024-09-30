@@ -16,9 +16,9 @@ public class LecturaEscrituraPdFxmlApplication {
 		
 		SpringApplication.run(LecturaEscrituraPdFxmlApplication.class, args);
 		
-		// Declare variables withe the necesary parameters
-		String pathLectura = "src\\main\\resources\\WhatisLoremIpsum.pdf";
-		String pathEscritura = "src\\main\\resources\\GeneratedDoc.txt";
+		// Declare variables with the necesary parameters
+		String pathLectura = "src/main/resources/WhatisLoremIpsum.pdf";
+		String pathEscritura = "src/main/resources/GeneratedDoc.txt";
 		String targetVowel = "[Aa]";
 		String finalVowel = "@";
 		

@@ -1,0 +1,32 @@
+PRUEB@ PDF P@RSE@DO
+Wh@t is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing @nd typesetting industry. Lorem Ipsum 
+h@s been the industry's st@nd@rd dummy text ever since the 1500s, when @n unknown 
+printer took @ g@lley of type @nd scr@mbled it to m@ke @ type specimen book. It h@s 
+survived not only five centuries, but @lso the le@p into electronic typesetting, rem@ining 
+essenti@lly unch@nged. It w@s popul@rised in the 1960s with the rele@se of Letr@set sheets 
+cont@ining Lorem Ipsum p@ss@ges, @nd more recently with desktop publishing softw@re 
+like @ldus P@geM@ker including versions of Lorem Ipsum.
+Why do we use it?
+It is @ long est@blished f@ct th@t @ re@der will be distr@cted by the re@d@ble content of @ 
+p@ge when looking @t its l@yout. The point of using Lorem Ipsum is th@t it h@s @ more-or-
+less norm@l distribution of letters, @s opposed to using 'Content here, content here', 
+m@king it look like re@d@ble English. M@ny desktop publishing p@ck@ges @nd web p@ge 
+editors now use Lorem Ipsum @s their def@ult model text, @nd @ se@rch for 'lorem ipsum' 
+will uncover m@ny web sites still in their inf@ncy. V@rious versions h@ve evolved over the 
+ye@rs, sometimes by @ccident, sometimes on purpose (injected humour @nd the like).
+Where does it come from?
+Contr@ry to popul@r belief, Lorem Ipsum is not simply r@ndom text. It h@s roots in @ piece 
+of cl@ssic@l L@tin liter@ture from 45 BC, m@king it over 2000 ye@rs old. Rich@rd McClintock, 
+@ L@tin professor @t H@mpden-Sydney College in Virgini@, looked up one of the more 
+obscure L@tin words, consectetur, from @ Lorem Ipsum p@ss@ge, @nd going through the 
+cites of the word in cl@ssic@l liter@ture, discovered the undoubt@ble source. Lorem Ipsum 
+comes from sections 1.10.32 @nd 1.10.33 of "de Finibus Bonorum et M@lorum" (The 
+Extremes of Good @nd Evil) by Cicero, written in 45 BC. This book is @ tre@tise on the 
+theory of ethics, very popul@r during the Ren@iss@nce. The first line of Lorem Ipsum, 
+"Lorem ipsum dolor sit @met..", comes from @ line in section 1.10.32.
+The st@nd@rd chunk of Lorem Ipsum used since the 1500s is reproduced below for those 
+interested. Sections 1.10.32 @nd 1.10.33 from "de Finibus Bonorum et M@lorum" by Cicero 
+@re @lso reproduced in their ex@ct origin@l form, @ccomp@nied by English versions from 
+the 1914 tr@nsl@tion by H. R@ckh@m.
+
