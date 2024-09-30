@@ -11,7 +11,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 public class PDFConverter {
 
-	public void parseAndWrittePDF (String entryPath, String exitPath) throws IOException {
+	public String parsePDF (String entryPath) throws IOException {
 		
 		File entryFile = new File(entryPath);
 		
@@ -28,26 +28,6 @@ public class PDFConverter {
 		//We always need to close the PDDocument when we finish the parse
 		pddDocument.close();
 	    
-		File exitFile = new File(exitPath);
-		
-		try {
-			FileWriter writter = new FileWriter(exitFile, false);
-			PrintWriter printWritter = new PrintWriter(writter);
-			
-			String formatedText = text.replaceAll("[aA]", "@");
-			
-			printWritter.println(formatedText);
-			printWritter.close();
-
-		} catch (IOException e) {
-			System.out.println("ERROR al intentar escibir en el archivo");
-		}
+		return text;
 	}
-	/*public String changeVowels(String text, String charToChange, String newChar) {
-		String formatedText = "";
-		
-		formatedText = text.replaceAll(charToChange, newChar);
-		
-		return formatedText;
-	}*/
 }
