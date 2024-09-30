@@ -12,10 +12,6 @@ public class Data {
 		this.day = day;
 		this.subject = subject;
 	}
-	
-	public Data() {
-		
-	}
 
 
 	public String getHour() {
