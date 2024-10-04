@@ -1,0 +1,6 @@
+  TipoRespuesta=MA, Pregunta=What C datatypes are 8 bits? (assume i386), Respuesta=int, Resultado=Blank
+  TipoRespuesta=TF, Pregunta=Bagpipes are awesome., Respuesta=true, Resultado=Blank
+  TipoRespuesta=ESS, Pregunta=How have the original Henry Hornbostel buildings influenced campus architecture and design in the last 30 years?, Respuesta=Blank, Resultado=Blank
+  TipoRespuesta=ORD, Pregunta=Rank the following in their order of operation., Respuesta=Parentheses, Resultado=Exponents
+  TipoRespuesta=FIB, Pregunta=The student activities fee is, Respuesta=Ninety five, Resultado=dollars for students enrolled in
+  TipoRespuesta=MAT, Pregunta=Match the lower-case greek letter with its capital form., Respuesta=Landa, Resultado=Capuchon

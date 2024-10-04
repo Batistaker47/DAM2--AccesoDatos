@@ -57,10 +57,10 @@ public class Data {
 
 	@Override
 	public String toString() {
-		return 	"\nTipoRespuesta=" + tipoRespuesta + 
-				"\nPregunta=" + pregunta + 
-				"\nRespuesta=" + respuesta +
-				"\nResultado=" + resultado;
+		return 	"  TipoRespuesta=" + tipoRespuesta + 
+				", Pregunta=" + pregunta + 
+				", Respuesta=" + respuesta +
+				", Resultado=" + resultado + "\n";
 	}
 	
 	

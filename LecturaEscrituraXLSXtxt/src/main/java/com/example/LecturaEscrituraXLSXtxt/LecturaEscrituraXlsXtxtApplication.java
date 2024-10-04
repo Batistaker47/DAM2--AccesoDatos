@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.LecturaEscrituraXLSXtxt.io.ReadXLSX;
+import com.example.LecturaEscrituraXLSXtxt.io.Write;
 import com.example.LecturaEscrituraXLSXtxt.models.Data;
 
 
@@ -17,13 +18,17 @@ public class LecturaEscrituraXlsXtxtApplication {
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(LecturaEscrituraXlsXtxtApplication.class, args);
 		
-		String entryPath = "src/main/resources/proceso.xlsx";
+		String entryPath = "src/main/resources/sample1.xlsx";
+		String exitPath = "src/main/resources/result1.txt";
 		
 		ReadXLSX reader = new ReadXLSX();
+		Write writter = new Write();
 		
-		ArrayList<Data> dataList = reader.readFile(entryPath);
+		ArrayList<Data> dataList = new ArrayList<>();
 		
-		System.out.println(dataList);
+		dataList.addAll(reader.readFile(entryPath));
+		
+		writter.writeText(dataList, exitPath);
 	}
 
 }
