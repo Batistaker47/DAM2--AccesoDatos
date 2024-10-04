@@ -7,19 +7,11 @@ public class Data {
 	private String respuesta;
 	private String resultado;
 	
-<<<<<<< HEAD
 	public Data(String tipoRespuesta, String pregunta, String respuesta, String resultado) {
 		this.tipoRespuesta = tipoRespuesta;
 		this.pregunta = pregunta;
 		this.respuesta = respuesta;
 		this.resultado = resultado;
-=======
-	
-	public Data(String hour, String day, String subject) {
-		this.hour = hour;
-		this.day = day;
-		this.subject = subject;
->>>>>>> 877ad33c9d512b7b64fc83aae811038dcbb79b38
 	}
 
 
