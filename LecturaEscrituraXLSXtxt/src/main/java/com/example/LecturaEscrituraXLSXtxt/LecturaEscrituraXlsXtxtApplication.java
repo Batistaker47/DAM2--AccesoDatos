@@ -21,7 +21,7 @@ public class LecturaEscrituraXlsXtxtApplication {
 		
 		ReadXLSX reader = new ReadXLSX();
 		
-		ArrayList<Data> dataList = ReadXLSX.readFile(entryPath);
+		ArrayList<Data> dataList = reader.readFile(entryPath);
 		
 		System.out.println(dataList);
 	}
