@@ -2,56 +2,70 @@ package com.example.LecturaEscrituraXLSXtxt.models;
 
 public class Data {
 	
-	private String hour;
-	private String day;
-	private String subject;
+	private String tipoRespuesta;
+	private String pregunta;
+	private String respuesta;
+	private String resultado;
 	
-	
-	public Data(String hour, String day, String subject) {
-		this.hour = hour;
-		this.day = day;
-		this.subject = subject;
-	}
-	
-	public Data() {
-		
+	public Data(String tipoRespuesta, String pregunta, String respuesta, String resultado) {
+		this.tipoRespuesta = tipoRespuesta;
+		this.pregunta = pregunta;
+		this.respuesta = respuesta;
+		this.resultado = resultado;
 	}
 
 
-	public String getHour() {
-		return hour;
+	public String getTipoRespuesta() {
+		return tipoRespuesta;
 	}
 
 
-	public void setHour(String hour) {
-		this.hour = hour;
+	public void setTipoRespuesta(String tipoRespuesta) {
+		this.tipoRespuesta = tipoRespuesta;
 	}
 
 
-	public String getDay() {
-		return day;
+	public String getPregunta() {
+		return pregunta;
 	}
 
 
-	public void setDay(String day) {
-		this.day = day;
+	public void setPregunta(String pregunta) {
+		this.pregunta = pregunta;
 	}
 
 
-	public String getSubject() {
-		return subject;
+	public String getRespuesta() {
+		return respuesta;
 	}
 
 
-	public void setSubject(String subject) {
-		this.subject = subject;
+	public void setRespuesta(String respuesta) {
+		this.respuesta = respuesta;
+	}
+
+
+	public String getResultado() {
+		return resultado;
+	}
+
+
+	public void setResultado(String resultado) {
+		this.resultado = resultado;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Data [hour=" + hour + ", day=" + day + ", subject=" + subject + "]";
+		return 	"\nTipoRespuesta=" + tipoRespuesta + 
+				"\nPregunta=" + pregunta + 
+				"\nRespuesta=" + respuesta +
+				"\nResultado=" + resultado;
 	}
+	
+	
+	
+	
 	
 	
 	
