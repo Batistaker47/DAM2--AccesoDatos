@@ -30,7 +30,7 @@ public class JsonProcessor {
 			Object object = jsonParser.parse(reader);
 			
 			// Convertimos el objeto a un JSONArray
-			// Hacemos esto porque el JSON en si tiene un array []
+			// Hacemos esto porque el JSON tiene 2 objetos empleado, que son arrays
 			// Lo convertimos a un array para poder iterar sobre el
 			JSONArray employeeList = (JSONArray) object;
 			
