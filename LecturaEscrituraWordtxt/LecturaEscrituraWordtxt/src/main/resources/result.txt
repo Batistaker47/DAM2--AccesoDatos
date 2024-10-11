@@ -1,0 +1,5 @@
+1	Diego	Martinez	20,
+2	Eduardo	Ramos	18,
+3	Carlos	Aparicio	19,
+
+
