@@ -15,8 +15,11 @@ public class JsonReader {
 	public String JSONReader(String path) {
 		
 		JSONParser jsonParser = new JSONParser();
+		String glossaryText = "";
 		
 		try (FileReader fileReader = new FileReader(path)) {
+			
+			
 			// Parseamos el JSON a un objeto
 			// El parser analiza la estructura del JSON y lo convierte a un objeto.
 			// Este objeto ahora tiene atributos que equivalen a la estructura del json
@@ -50,7 +53,7 @@ public class JsonReader {
 			String glossaryDefPara = (String) glossaryDefInfo.get("para");
 			ArrayList<String> glossaryDefGlossSeeAlso = (ArrayList<String>) glossaryDefInfo.get("GlossSeeAlso");
 			
-			System.out.println(
+			glossaryText +=
 					glossaryTitle + "\n" +
 					glosaryDivTitle + "\n" +
 					glossaryEntryId + "\n" +
@@ -60,15 +63,13 @@ public class JsonReader {
 					glossaryEntryAbbrev + "\n" + 
 					glossaryDefPara + "\n" + 
 					glossaryDefGlossSeeAlso + "\n" +
-					glossaryEntryGlossSee);
-			
-			
+					glossaryEntryGlossSee;
 			
 		} catch (IOException | ParseException e) {
 			e.printStackTrace();
 		}
-		
-		String glossaryText = "";
+		System.out.println(glossaryText);
 		return glossaryText;
+		
 	}
 }
