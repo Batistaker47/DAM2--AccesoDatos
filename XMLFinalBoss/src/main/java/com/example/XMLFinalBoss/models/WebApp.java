@@ -1,37 +1,39 @@
 package com.example.XMLFinalBoss.models;
 
+import java.util.ArrayList;
+
 public class WebApp {
-	private Servlet servlet;
-	private ServletMapping servletMapping;
-	private TagLib tagLib;
+	private ArrayList<Servlet> servlet;
+	private ArrayList<ServletMapping> servletMapping;
+	private ArrayList<TagLib> tagLib;
 	
-	public WebApp(Servlet servlet, ServletMapping servletMapping, TagLib tagLib) {
+	public WebApp(ArrayList<Servlet> servlet, ArrayList<ServletMapping> servletMapping, ArrayList<TagLib> tagLib) {
 		this.servlet = servlet;
 		this.servletMapping = servletMapping;
 		this.tagLib = tagLib;
 	}
 
-	public Servlet getServlet() {
+	public ArrayList<Servlet> getServlet() {
 		return servlet;
 	}
 
-	public void setServlet(Servlet servlet) {
+	public void setServlet(ArrayList<Servlet> servlet) {
 		this.servlet = servlet;
 	}
 
-	public ServletMapping getServletMapping() {
+	public ArrayList<ServletMapping> getServletMapping() {
 		return servletMapping;
 	}
 
-	public void setServletMapping(ServletMapping servletMapping) {
+	public void setServletMapping(ArrayList<ServletMapping> servletMapping) {
 		this.servletMapping = servletMapping;
 	}
 
-	public TagLib getTagLib() {
+	public ArrayList<TagLib> getTagLib() {
 		return tagLib;
 	}
 
-	public void setTagLib(TagLib tagLib) {
+	public void setTagLib(ArrayList<TagLib> tagLib) {
 		this.tagLib = tagLib;
 	}
 
