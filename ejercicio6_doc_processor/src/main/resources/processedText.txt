@@ -1,0 +1,3 @@
+ID: 1 Nombre: Diego Nombre: Martinez Nombre: 20,
+ID: 2 Nombre: Eduardo Nombre: Ramos Nombre: 18,
+ID: 3 Nombre: Carlos Nombre: Aparicio Nombre: 19,
