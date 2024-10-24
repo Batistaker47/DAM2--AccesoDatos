@@ -10,7 +10,7 @@ import com.example.Frontal.ApiRest.service.UserService;
 
 
 @RestController
-@RequestMapping("/index.html")
+@RequestMapping("/api/users")
 public class UserControler {
     private final UserService userService;
 
@@ -18,7 +18,7 @@ public class UserControler {
 	public String greeting(Model model, String path) {
     	path = "/Frontal-ApiRest/src/main/resources/Simple-Contact-Form/index.html";
 		model.addAttribute("name", path);
-		return "index.html";
+		return "index";
 	}
     @Autowired
     public UserControler(UserService userService) {
