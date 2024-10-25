@@ -10,16 +10,11 @@ import com.example.Frontal.ApiRest.service.UserService;
 
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/users")
 public class UserControler {
     private final UserService userService;
-
-    @GetMapping("/index.html")
-	public String greeting(Model model, String path) {
-    	path = "/Frontal-ApiRest/src/main/resources/Simple-Contact-Form/index.html";
-		model.addAttribute("name", path);
-		return "index";
-	}
+    
     @Autowired
     public UserControler(UserService userService) {
         this.userService = userService;
