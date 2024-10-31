@@ -8,7 +8,7 @@ import com.example.demo.model.Product;
 import com.example.demo.service.ProductService;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/users")
 public class ProductController {
 
     private final ProductService productService;
