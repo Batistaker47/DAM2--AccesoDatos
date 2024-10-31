@@ -5,6 +5,7 @@ $(document).ready(function () {
   function getPageData() {
     $.ajax({
       dataType: "json",
+      type: "GET",
       url: "http://localhost:8888/api/grados",
     }).done(function (data) {
       console.log(data.data);
