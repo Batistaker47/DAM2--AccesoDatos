@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>api</artifactId>
+	<artifactId>api1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>api</name>
+	<name>api1</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -27,6 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
+	<mysql-connector-java-systemPath>D:/Repos David/DAM2--AccesoDatos</mysql-connector-java-systemPath>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -46,8 +47,9 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.2.0</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>

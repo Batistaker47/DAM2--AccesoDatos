@@ -20,17 +20,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.api.models.Alumno;
+import com.example.api.models.Persona;
 
-import com.example.api.repositories.AlumnoRepository;
+import com.example.api.repositories.PersonaRepository;
 
 @RestController
 
-public class AlumnoController {
+public class PersonaController {
 
-	AlumnoRepository repositorio;
+	PersonaRepository repositorio;
 
-	public AlumnoController(AlumnoRepository repositorio) {
+	public PersonaController(PersonaRepository repositorio) {
 
 		this.repositorio = repositorio;
 
@@ -38,19 +38,19 @@ public class AlumnoController {
 
 	@CrossOrigin("http://127.0.0.1:5500")
 
-	@GetMapping("/api/alumnos")
+	@GetMapping("/api/personas")
 
-	public List<Alumno> obtenerAlumnos() {
+	public List<Persona> obtenerPersonas() {
 
 		return repositorio.findAll();
 
 	}
 
-	@GetMapping("/api/alumno/{id}")
+	@GetMapping("/api/persona/{id}")
 
-	public ResponseEntity<Alumno> obtenerAlumno(@PathVariable Long id) {
+	public ResponseEntity<Persona> obtenerPersona(@PathVariable Long id) {
 
-		Optional<Alumno> opt = repositorio.findById(id);
+		Optional<Persona> opt = repositorio.findById(id);
 
 		if (opt.isEmpty()) {
 
@@ -68,44 +68,44 @@ public class AlumnoController {
 
 	@CrossOrigin("http://127.0.0.1:5500")
 
-	@PostMapping("/api/alumnos")
+	@PostMapping("/api/personas")
 
-	public ResponseEntity<Alumno> guardarAlumno(@RequestBody Alumno alumno) {
+	public ResponseEntity<Persona> guardarPersona(@RequestBody Persona persona) {
 
-		if (alumno.getId() != null) {
+		if (persona.getId() != null) {
 
 			return ResponseEntity.badRequest().build();
 
 		}
 
-		repositorio.save(alumno);
+		repositorio.save(persona);
 
-		return ResponseEntity.ok(alumno);
+		return ResponseEntity.ok(persona);
 
 	}
 
 	@CrossOrigin("http://127.0.0.1:5500")
 
-	@PutMapping("/api/alumnos")
+	@PutMapping("/api/personas")
 
-	public ResponseEntity<Alumno> actualizarAlumno(@RequestBody Alumno alumno) {
+	public ResponseEntity<Persona> actualizarPersona(@RequestBody Persona persona) {
 
-		if (alumno.getId() == null || !repositorio.existsById(alumno.getId()))
+		if (persona.getId() == null || !repositorio.existsById(persona.getId()))
 
 		{
 			return ResponseEntity.badRequest().build();
 		}
 
-		repositorio.save(alumno);
+		repositorio.save(persona);
 
-		return ResponseEntity.ok(alumno);
+		return ResponseEntity.ok(persona);
 
 	}
 	
 	@CrossOrigin("http://127.0.0.1:5500")
-	@DeleteMapping("/api/alumnos/{id}")
+	@DeleteMapping("/api/personas/{id}")
 	
-	public ResponseEntity<Alumno> borrarAlumno(@PathVariable Long id){
+	public ResponseEntity<Persona> borrarPersona(@PathVariable Long id){
 		if (id== null || !repositorio.existsById(id)) {
 			return ResponseEntity.badRequest().build();
 		}

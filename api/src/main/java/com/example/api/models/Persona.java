@@ -4,9 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Alumno {
+@Table(name = "personas")
+public class Persona {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,11 +19,11 @@ public class Alumno {
 	String career;
 	
 	
-	public Alumno() {
+	public Persona() {
 		
 	}
 
-	public Alumno(String name, String surname, String career) {
+	public Persona(String name, String surname, String career) {
 		this.name = name;
 		this.surname = surname;
 		this.career = career;
